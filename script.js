@@ -2,92 +2,89 @@
 const gameScenes = [
     {
         id: 1,
-        title: '',
-        description:'',
+        description: "",
         image: 'background1.png',
         showControls: true,
         showForward: true,
         showBackward: false,
-        narration: "You stand at the edge of an ancient forest. The trees seem to whisper secrets as their branches sway in the gentle breeze.",
-        audio: 'null'
+        audio: 'null',
+        useTypewriter: false
     },
     {
         id: 2,
-        title: "",
-        description: "",
+        description: "You see a strange figure in front of you, sitting under a tree, meditating in silence with several portals around it. As you watch those portals carefully, you notice that you can see universes in each portal. Fascinated, as you continue to watch, you wake it ...",
         image: 'background2.png',
         showControls: true,
         showForward: true,
         showBackward: true,
-        narration: "The path before you glows with an otherworldly light, as if the forest itself is guiding your way.",
-        audio: 'audio/scene3.mp3'
+        audio: 'audio/narration.mp3',
+        useTypewriter: true,
+        typewriterSpeed: 35  // Speed in milliseconds (lower = faster)
     },
     {
         id: 3,
-        title: "",
-        description: "",
-        image: 'background3.png',
+        description: "Welcome stranger, I see you! My name is Kakbhushundi. I am a devotee of Shree Ram. Don't be startled by my looks, my appearance is because of a curse due to my arrogance and pride.",
+        image: '2.png',
         showControls: true,
         showForward: true,
         showBackward: true,
-        narration: "The markings seem to tell a story, one of power and mystery hidden within these woods.",
-        audio: 'audio/scene4.mp3'
+        audio: 'audio/scene1.mp3',
+        useTypewriter: true,
+        typewriterSpeed: 30
     },
     {
         id: 4,
-        title: "",
-        description: "",
-        image: 'background4.png',
+        description: "But this curse became a step in my spiritual evolution, when I renounced my ego and embraced total devotion to Shree Ram. Moved by my unwavering devotion, Shree Ram granted me immortality and divine knowledge allowing me to see events that have already occurred and that would occur in the future, across different universes.",
+        image: '3.png',
         showControls: true,
         showForward: true,
         showBackward: true,
-        narration: "The air crackles with energy as you enter the clearing, the crystals resonating with an ancient power.",
-        audio: 'audio/scene5.mp3'
+        audio: 'audio/scene2.mp3',
+        useTypewriter: true,
+        typewriterSpeed: 35
     },
     {
         id: 5,
-        title: "",
-        description: "",
-        image: 'background5.png',
+        description: "I have witnessed Mahabharat not once, but sixteen times across different universes with different outcomes. Each time, the great war unfolds with subtle variations, yet one truth remains constant: destiny is a force not easily turned.",
+        image: '4.png',
         showControls: true,
         showForward: true,
         showBackward: true,
-        narration: "Before you stands a guardian of old, its form shifting between light and shadow.",
-        audio: 'audio/scene6.mp3'
+        audio: 'audio/scene3.mp3',
+        useTypewriter: true,
+        typewriterSpeed: 30
     },
     {
         id: 6,
-        title: "",
-        description: "",
-        image: 'background6.png',
+        description: "While I watched Mahabharat across timeline and universes, I stood at a pivotal moment in one of the universe, where I have traveled to a timeline where I must choose how to guide the Pandavs to win the battle of Kurukshetra.",
+        image: '5.png',
         showControls: true,
         showForward: true,
         showBackward: true,
-        narration: "Before you stands a guardian of old, its form shifting between light and shadow.",
-        audio: 'audio/scene7.mp3'
+        audio: 'audio/scene4.mp3',
+        useTypewriter: true,
+        typewriterSpeed: 30
     },
     {
         id: 7,
-        title: "",
-        description: "",
-        image: 'background7.png',
+        description: "What should I have done?",
+        image: '6.png',
         showControls: true,
         showForward: true,
         showBackward: true,
-        narration: "Before you stands a guardian of old, its form shifting between light and shadow.",
-        audio: 'null',
+        audio: 'audio/scene6.mp3',
+        useTypewriter: true,
+        typewriterSpeed: 10
         
     },
     {
         id: 8,
-        title: "",
-        description: "",
-        image: 'background8.png',
+        description: "What should I have done?",
+        image: '6.png',
         showControls: true,
-        showForward: true,
+        showForward: false,
         showBackward: true,
-        narration: "Before you stands a guardian of old, its form shifting between light and shadow.",
-        audio: 'null',
+        audio: 'audio/choice.mp3',
         choices: [
             { text: "Should I advise the Pandavas to prevent war and guide them toward peace over bloodshed?", nextScene: 9 },
             { text: "Or should I let destiny unfold as it must? For I have seen that the war may be inevitable", nextScene: 13 }
@@ -95,110 +92,189 @@ const gameScenes = [
     },
     {
         id: 9,
-        title: "",
-        description: "",
-        image: 'background9.png',
+        description: "A noble thought indeed. I, too, once wished to change the tide of fate. In one of the timelines, I intervened early, urging the Pandavs toward diplomacy and avoidance of war. But...",
+        image: '8.png',
         showControls: true,
         showForward: true,
         showBackward: false,
-        narration: "Before you stands a guardian of old, its form shifting between light and shadow.",
-        audio: 'null'
+        audio: 'audio/A1.mp3',
+        useTypewriter: true,
+        typewriterSpeed: 40
     },
     {
         id: 10,
-        title: "",
-        description: "",
-        image: 'background10.png',
+        description: "Despite my intentions, the wheel of destiny spun on. Quarrels deepened. Duryodhana's pride remained unbent. And even where peace was momentarily won, war eventually erupted in a different form.",
+        image: '9.png',
         showControls: true,
         showForward: true,
         showBackward: false,
-        narration: "Before you stands a guardian of old, its form shifting between light and shadow.",
-        audio: 'null'
+        audio: 'audio/A2.mp3',
+        useTypewriter: true,
+        typewriterSpeed: 40
     },
-    {
+    { //Branch A wisdom
         id: 11,
-        title: "",
         description: "",
-        image: 'background11.png',
+        image: '10.png',
         showControls: true,
         showForward: true,
         showBackward: false,
-        narration: "Before you stands a guardian of old, its form shifting between light and shadow.",
-        audio: 'null'
+        audio: 'audio/scene9.mp3',
+        useTypewriter: false
     },
-    {
+    { //Branch A Shlok
         id: 12,
-        title: "",
         description: "",
-        image: 'background12.png',
-        showControls: true,
-        showForward: true,
+        image: '11.png',
+        showControls: false,
+        showForward: false,
         showBackward: false,
-        narration: "Before you stands a guardian of old, its form shifting between light and shadow.",
-        audio: 'null'
+        audio: 'null',
+        playAgain: true
+        
     },
     {
         id: 13,
-        title: "",
-        description: "",
-        image: 'background13.png',
+        description: "Yes... this is the path I ultimately walked. After witnessing the war across many realms, I understood it is not for even a sage to bend the laws of time. The Mahabharata is not merely a conflict of kings. It is the unfolding of karma, the resolution of ancient debts, and the birth of dharma through fire.",
+        image: '12.png',
         showControls: true,
         showForward: true,
         showBackward: false,
-        narration: "Before you stands a guardian of old, its form shifting between light and shadow.",
-        audio: 'null'
+        audio: 'audio/B1.mp3',
+        useTypewriter: true,
+        typewriterSpeed: 35
     },
     {
         id: 14,
-        title: "",
-        description: "",
-        image: 'background14.png',
+        description: "Had I stopped the war, I would have merely delayed the storm. The lessons it brings about duty, sacrifice, and cosmic balance would remain unlearned. You have chosen wisely. The understanding of fate's role is a mark of deep insight. My gratitude to you, dear friend, for affirming the path I took.",
+        image: '13.png',
         showControls: true,
         showForward: true,
         showBackward: false,
-        narration: "Before you stands a guardian of old, its form shifting between light and shadow.",
-        audio: 'null'
+        audio: 'audio/B2.mp3',
+        useTypewriter: true,
+        typewriterSpeed: 40
     },
-    {
+    { //Branch B wisdom
         id: 15,
-        title: "",
         description: "",
-        image: 'background15.png',
+        image: '14.png',
         showControls: true,
         showForward: true,
         showBackward: false,
-        narration: "Before you stands a guardian of old, its form shifting between light and shadow.",
-        audio: 'null'
+        audio: 'audio/scene13.mp3'
     },
-    {
+    { //Branch B Shlok
         id: 16,
-        title: "",
         description: "",
-        image: 'background16.png',
-        showControls: true,
-        showForward: true,
-        showBackward: false,
-        narration: "Before you stands a guardian of old, its form shifting between light and shadow.",
-        audio: 'null'
-    },
-    {
-        id: 17,
-        title: "",
-        description: "",
-        image: 'background17.png',
+        image: '15.png',
         showControls: false,
         showForward: true,
         showBackward: false,
-        narration: "Before you stands a guardian of old, its form shifting between light and shadow.",
-        audio: 'null'
+        audio: 'null',
+        playAgain: true
     },
-
+    
     // Add more scenes as needed
 ];
+
+// Preload all assets
+const assetsToPreload = [
+    // Background images
+    'images/background1.png',
+    'images/background2.png',
+    'images/2.png',
+    'images/3.png',
+    'images/4.png',
+    'images/5.png',
+    'images/6.png',
+    'images/8.png',
+    'images/9.png',
+    'images/10.png',
+    'images/11.png',
+    'images/12.png',
+    'images/13.png',
+    'images/14.png',
+    'images/15.png',
+    // Control images
+    'images/backward.png',
+    'images/forward.png',
+    // Audio files
+    'audio/narration.mp3',
+    'audio/scene1.mp3',
+    'audio/scene2.mp3',
+    'audio/scene3.mp3',
+    'audio/scene4.mp3',
+    'audio/scene6.mp3',
+    'audio/choice.mp3',
+    'audio/A1.mp3',
+    'audio/A2.mp3',
+    'audio/scene9.mp3',
+    'audio/B1.mp3',
+    'audio/B2.mp3',
+    'audio/scene13.mp3'
+];
+
+// Create loading screen
+function createLoadingScreen() {
+    const loadingScreen = document.createElement('div');
+    loadingScreen.id = 'loading-screen';
+    loadingScreen.innerHTML = '<div class="loading-text">Loading</div>';
+    document.body.appendChild(loadingScreen);
+}
+
+// Function to preload images
+function preloadImage(src) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = () => reject(new Error(`Failed to load image: ${src}`));
+        img.src = src;
+    });
+}
+
+// Function to preload audio
+function preloadAudio(src) {
+    return new Promise((resolve, reject) => {
+        const audio = new Audio();
+        audio.oncanplaythrough = () => resolve(audio);
+        audio.onerror = () => reject(new Error(`Failed to load audio: ${src}`));
+        audio.src = src;
+    });
+}
+
+// Function to preload all assets
+async function preloadAllAssets() {
+    const promises = assetsToPreload.map(src => {
+        if (src.endsWith('.mp3')) {
+            return preloadAudio(src);
+        } else {
+            return preloadImage(src);
+        }
+    });
+
+    try {
+        await Promise.all(promises);
+        document.getElementById('loading-screen').classList.add('hidden');
+        document.querySelector('.container').classList.remove('hidden');
+    } catch (error) {
+        console.error('Error preloading assets:', error);
+        // Handle error appropriately
+    }
+}
 
 let currentSceneIndex = 0;
 let isTransitioning = false;
 let currentAudio = null;
+let visitedScenes = new Set();
+
+// Initialize the game
+async function initializeGame() {
+    createLoadingScreen();
+    document.querySelector('.container').classList.add('hidden');
+    await preloadAllAssets();
+    updateSceneContent();
+}
 
 // Get the elements
 const forwardButton = document.querySelector('img[alt="Forward button"]');
@@ -262,6 +338,56 @@ function handleSceneTransition(newSceneIndex) {
     }, 500);
 }
 
+// Function to create typewriter effect
+function createTypewriterEffect(element, text, speed = 50) {
+    // Clear existing content
+    element.innerHTML = '';
+    element.classList.add('typewriter');
+    
+    // Only disable buttons if this scene hasn't been visited before
+    if (!visitedScenes.has(currentSceneIndex)) {
+        forwardButton.style.pointerEvents = 'none';
+        forwardButton.style.opacity = '0.3';
+        backwardButton.style.pointerEvents = 'none';
+        backwardButton.style.opacity = '0.3';
+    }
+    
+    // Split text into characters and create spans
+    const chars = text.split('').map(char => {
+        const span = document.createElement('span');
+        span.className = 'char';
+        span.textContent = char;
+        element.appendChild(span);
+        return span;
+    });
+    
+    // Animate each character
+    let currentIndex = 0;
+    function animateNextChar() {
+        if (currentIndex < chars.length) {
+            chars[currentIndex].classList.add('visible');
+            currentIndex++;
+            setTimeout(animateNextChar, speed);
+        } else {
+            // Animation complete - enable navigation buttons
+            const currentScene = gameScenes[currentSceneIndex];
+            if (currentScene.showForward) {
+                forwardButton.style.pointerEvents = 'auto';
+                forwardButton.style.opacity = '1';
+            }
+            if (currentScene.showBackward) {
+                backwardButton.style.pointerEvents = 'auto';
+                backwardButton.style.opacity = '1';
+            }
+            // Mark this scene as visited
+            visitedScenes.add(currentSceneIndex);
+        }
+    }
+    
+    // Start animation
+    animateNextChar();
+}
+
 // Function to update scene content
 function updateSceneContent() {
     const currentScene = gameScenes[currentSceneIndex];
@@ -272,27 +398,73 @@ function updateSceneContent() {
     // Update controls visibility
     if (currentScene.showControls) {
         controlDiv.style.display = 'flex';
-        // Update forward/backward button visibility
-        forwardButton.style.opacity = currentScene.showForward ? '1' : '0.3';
-        forwardButton.style.pointerEvents = currentScene.showForward ? 'auto' : 'none';
-        backwardButton.style.opacity = currentScene.showBackward ? '1' : '0.3';
-        backwardButton.style.pointerEvents = currentScene.showBackward ? 'auto' : 'none';
+        
+        // If scene has been visited before, enable buttons immediately
+        if (visitedScenes.has(currentSceneIndex)) {
+            if (currentScene.showForward) {
+                forwardButton.style.pointerEvents = 'auto';
+                forwardButton.style.opacity = '1';
+            }
+            if (currentScene.showBackward) {
+                backwardButton.style.pointerEvents = 'auto';
+                backwardButton.style.opacity = '1';
+            }
+        } else {
+            // New scene - initially disable both buttons
+            forwardButton.style.opacity = '0.3';
+            forwardButton.style.pointerEvents = 'none';
+            backwardButton.style.opacity = '0.3';
+            backwardButton.style.pointerEvents = 'none';
+        }
     } else {
         controlDiv.style.display = 'none';
     }
     
-    // Update scene text
-    document.querySelector('.scene-title').textContent = currentScene.title;
-    document.querySelector('.scene-description').textContent = currentScene.description;
+    // Update scene text with typewriter effect if enabled
+    const descriptionElement = document.querySelector('.scene-description');
+    
+    if (currentScene.useTypewriter && !visitedScenes.has(currentSceneIndex)) {
+        // Use the scene's typewriterSpeed if defined, otherwise use default (50ms)
+        const speed = currentScene.typewriterSpeed || 50;
+        createTypewriterEffect(descriptionElement, currentScene.description, speed);
+    } else {
+        // For visited scenes or scenes without typewriter, show text immediately
+        descriptionElement.textContent = currentScene.description;
+        descriptionElement.classList.remove('typewriter');
+        
+        // If no typewriter effect or scene was visited, enable buttons immediately
+        if (currentScene.showForward) {
+            forwardButton.style.pointerEvents = 'auto';
+            forwardButton.style.opacity = '1';
+        }
+        if (currentScene.showBackward) {
+            backwardButton.style.pointerEvents = 'auto';
+            backwardButton.style.opacity = '1';
+        }
+    }
     
     // Play narration
-    if (currentScene.audio) {
+    if (currentScene.audio && currentScene.audio !== 'null') {
         playNarration(currentScene.audio);
     }
     
-    // Handle choices if they exist
+    // Handle choices or play again button
     const choicesContainer = document.querySelector('.choices');
-    if (currentScene.choices) {
+    choicesContainer.innerHTML = ''; // Clear any existing content
+    
+    if (currentScene.playAgain) {
+        console.log('Creating play again button for scene', currentSceneIndex); // Debug log
+        const playAgainBtn = document.createElement('button');
+        playAgainBtn.className = 'play-again-btn';
+        playAgainBtn.textContent = 'Play Again';
+        playAgainBtn.addEventListener('click', () => {
+            currentSceneIndex = 0;
+            visitedScenes.clear();
+            handleSceneTransition(0);
+        });
+        choicesContainer.style.display = 'flex';
+        choicesContainer.appendChild(playAgainBtn);
+    } else if (currentScene.choices) {
         choicesContainer.innerHTML = currentScene.choices.map(choice => 
             `<button class="choice-btn">${choice.text}</button>`
         ).join('');
@@ -337,4 +509,7 @@ updateSceneContent();
 
 // Add click event listeners
 forwardButton.addEventListener('click', () => changeScene('forward'));
-backwardButton.addEventListener('click', () => changeScene('backward')); 
+backwardButton.addEventListener('click', () => changeScene('backward'));
+
+// Initialize the game when the window loads
+window.addEventListener('load', initializeGame); 

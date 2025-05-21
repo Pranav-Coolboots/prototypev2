@@ -61,8 +61,7 @@ body.fade::before {
     bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
-    max-width: 1200px;
+    width: 1520px;
     text-align: center;
     color: white;
     z-index: 2;
@@ -86,12 +85,36 @@ body.fade::before {
 }
 
 .scene-description {
-    font-size: 1.5em;
-    line-height: 1.4;
+    font-size: 32px;
+    line-height: 47px;
     margin-bottom: 30px;
     transition: transform 0.5s ease-in-out;
     min-height: 2.8em;
     white-space: pre-wrap;
+    color: #666; /* Default grey color */
+    width: 1520px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scene-description.typewriter {
+    color: #666;
+}
+
+.scene-description.typewriter .char {
+    display: inline-block;
+    color: #666;
+    transition: color 0.1s ease;
+}
+
+.scene-description.typewriter .char.visible {
+    color: white;
 }
 
 .story-content.fade .scene-description {
@@ -111,7 +134,7 @@ body.fade::before {
 }
 
 .choice-btn {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(109, 109, 109, 0.5);
     color: white;
     border: 2px solid rgba(255, 255, 255, 0.3);
     padding: 15px 30px;
@@ -162,4 +185,60 @@ body.fade::before {
 
 .control img[style*="opacity: 0.3"]:hover {
     transform: none;
+}
+
+.play-again-btn {
+    background: white;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    min-width: 200px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.play-again-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Loading Screen Styles */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-text {
+    color: white;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Loading Animation */
+.loading-text::after {
+    content: '...';
+    animation: loadingDots 1.5s infinite;
+}
+
+@keyframes loadingDots {
+    0% { content: '.'; }
+    33% { content: '..'; }
+    66% { content: '...'; }
+    100% { content: '.'; }
 }
